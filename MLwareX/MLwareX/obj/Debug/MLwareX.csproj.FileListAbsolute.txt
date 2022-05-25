@@ -1,0 +1,43 @@
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\MLwareX.exe.config
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\MLwareX.exe
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\MLwareX.pdb
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.MainForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.NotificationsForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.Properties.Resources.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.ScannerForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.SettingsForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.GenerateResource.cache
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CoreCompileInputs.cache
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.exe
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.pdb
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.AssemblyReference.cache
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.DetectionForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\CircularProgressBar.dll
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\WinFormAnimation.dll
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\CircularProgressBar.xml
+C:\Users\samet\source\repos\MLwareX\MLwareX\bin\Debug\WinFormAnimation.xml
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CopyComplete
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.HelpForm.resources
+C:\Users\samet\source\repos\MLwareX\MLwareX\obj\Debug\MLwareX.ProfileForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\MLwareX.exe.config
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\MLwareX.exe
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\MLwareX.pdb
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\CircularProgressBar.dll
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\WinFormAnimation.dll
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\CircularProgressBar.xml
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\WinFormAnimation.xml
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.AssemblyReference.cache
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.SuggestedBindingRedirects.cache
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.DetectionForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.HelpForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.MainForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.NotificationsForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.ProfileForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.Properties.Resources.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.ScannerForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.SettingsForm.resources
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.GenerateResource.cache
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CoreCompileInputs.cache
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CopyComplete
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.exe
+C:\Users\Fikri Samet Mert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.pdb
