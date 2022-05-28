@@ -60,16 +60,69 @@ namespace MLwareX
             file.Title = "Select File...";
 
             if (file.ShowDialog() == DialogResult.OK)
-            {   
+            {
+                timer1.Enabled = true;
                 string[] filePaths = file.FileNames;
                 for (int i = 0; i < file.FileNames.Length; i++)
                 {
                     ListViewItem li = new ListViewItem(filePaths);
-                    listView1.Items.Add(li);
                 }
-                string dbfile = @"C:\\Users\\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\selectedFiles.csv";
+                string dbfile = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedFiles.csv";
                 File.WriteAllLines(dbfile, file.FileNames);
-                timer1.Enabled = true;
+                for (int x = 0; x < filePaths.Length; x += 1)
+                {
+                    var src = DateTime.Now;
+                    var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, 0);
+                    Console.WriteLine();
+                    Console.WriteLine(filePaths[x] + "," + hm);
+                }
+                Process cmd = new Process();
+                cmd.StartInfo.FileName = "cmd.exe";
+                cmd.StartInfo.RedirectStandardInput = true;
+                cmd.StartInfo.RedirectStandardOutput = true;
+                cmd.StartInfo.CreateNoWindow = true;
+                cmd.StartInfo.UseShellExecute = false;
+                cmd.Start();
+
+                cmd.StandardInput.WriteLine(@"C:\\Users\FikriSametMert\AppData\Local\Programs\Python\Python39\python.exe C:/Users/FikriSametMert/Desktop/MalConv-keras-master/MalConv-keras-master/MalConv-keras-master/src/predict.py C:\\Users\\FikriSametMert\\Desktop\\MLwareX\\MLwareX\\bin\\Debug\\selectedFiles.csv");
+                cmd.StandardInput.Flush();
+                cmd.StandardInput.Close();
+                cmd.WaitForExit();
+                Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+
+                using (var reader = new StreamReader(@"C:\Users\FikriSametMert\Desktop\MalConv-keras-master\MalConv-keras-master\MalConv-keras-master\src\samp\result.csv"))
+                {
+                    List<string> listA = new List<string>();
+                    List<string> listB = new List<string>();
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(',');
+
+                        listA.Add(values[0]);
+                        listB.Add(values[1]);
+                    }
+
+                    for (int i = 0; i < listA.Count; i++)
+                    {
+
+                        float f1 = float.Parse(listB[i].Replace(".", ","));
+                        Console.WriteLine("listB " + f1);
+                        if (f1 < 0.85)
+                        {
+                            //MessageBox.Show(listA[i].ToString() + " is harmless","Result",0,MessageBoxIcon.Hand);
+                            listBox1.Items.Add(listA[i] + " is harmless");
+                        }
+                        else
+                        {
+                            //MessageBox.Show(listA[i].ToString() + " is malware","Result",0,MessageBoxIcon.Warning);
+                            listBox1.Items.Add(listA[i] + " is malware");
+
+                        }
+                        listBox1.Visible = true;
+                    }
+                }
+
             }
             else
             {
@@ -87,9 +140,12 @@ namespace MLwareX
 
             if (folder.ShowDialog() == DialogResult.OK)
             {
+                timer1.Enabled = true;
                 string folderPath = folder.SelectedPath;
                 MessageBox.Show(folderPath);
-                string dbfile = @"C:\\Users\\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\selectedFiles.csv";
+                string dbfile = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedFiles.csv";
+                string dbinfo = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
+
                 string[] files = Directory.GetFiles(folderPath, "*.exe", SearchOption.AllDirectories);
                 try
                 {
@@ -111,14 +167,14 @@ namespace MLwareX
                     cmd.StartInfo.UseShellExecute = false;
                     cmd.Start();
 
-                    cmd.StandardInput.WriteLine(@"C:\Users\Fikri Samet Mert\AppData\Local\Programs\Python\Python39\python.exe C:/Users/Fikri Samet Mert/Desktop/MalConv-keras-master/MalConv-keras-master/MalConv-keras-master/src/predict.py C:\\Users\\Fikri Samet Mert\Desktop\MLwareX\MLwareX\bin\Debug\selectedFiles.csv");
+                    cmd.StandardInput.WriteLine(@"C:\\Users\FikriSametMert\AppData\Local\Programs\Python\Python39\python.exe C:/Users/FikriSametMert/Desktop/MalConv-keras-master/MalConv-keras-master/MalConv-keras-master/src/predict.py C:\\Users\\FikriSametMert\\Desktop\\MLwareX\\MLwareX\\bin\\Debug\\selectedFiles.csv");
                     cmd.StandardInput.Flush();
                     cmd.StandardInput.Close();
                     cmd.WaitForExit();
                     Console.WriteLine(cmd.StandardOutput.ReadToEnd());
 
 
-                    using (var reader = new StreamReader(@"C:\Users\Fikri Samet Mert\Desktop\MalConv-keras-master\MalConv-keras-master\MalConv-keras-master\src\samp\result.csv"))
+                    using (var reader = new StreamReader(@"C:\Users\FikriSametMert\Desktop\MalConv-keras-master\MalConv-keras-master\MalConv-keras-master\src\samp\result.csv"))
                     {
                         List<string> listA = new List<string>();
                         List<string> listB = new List<string>();
@@ -142,8 +198,13 @@ namespace MLwareX
                             }
                             else
                             {
-
-                                Console.WriteLine(listA[i] + " is malware");
+                                var src = DateTime.Now;
+                                var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute,src.Second);
+                                using (StreamWriter writer = new StreamWriter(dbinfo,true))
+                                {
+                                    writer.WriteLine(listA[i] + "," + hm.ToString());
+                                }
+                                    Console.WriteLine(listA[i] + " is malware");
 
                             }
                         }
