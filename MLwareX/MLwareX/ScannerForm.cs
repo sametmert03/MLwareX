@@ -198,18 +198,53 @@ namespace MLwareX
                             }
                             else
                             {
-                                var src = DateTime.Now;
-                                var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute,src.Second);
-                                using (StreamWriter writer = new StreamWriter(dbinfo,true))
+                                using (var reader2 = new StreamReader(dbinfo))
                                 {
-                                    writer.WriteLine(listA[i] + "," + hm.ToString());
-                                }
+                                    List<string> listControl = new List<string>();
+                                    List<string> listBx = new List<string>();
+                                    while (!reader.EndOfStream)
+                                    {
+                                        var linex = reader.ReadLine();
+                                        var valuesx = linex.Split(',');
+
+                                        listControl.Add(valuesx[0]);
+                                        listBx.Add(valuesx[1]);
+                                    }
+                                    reader2.Close();
+                                    bool check = true;
+                                    var src = DateTime.Now;
+                                    var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second);
+                                    using (StreamWriter writer = new StreamWriter(dbinfo, true))
+                                    {
+                                        for (int ix = 0; ix < listControl.Count; ix++)
+                                        {
+                                            for (int bx = 0; bx < listA.Count; bx++)
+                                            {
+                                                if (listA[bx] == listControl[ix])
+                                                {
+                                                    check = true;
+                                                    break;
+                                                }
+                                                else
+                                                {
+                                                    check = false;
+                                                }  
+                                            }
+                                            if (check == false)
+                                            {
+                                                writer.WriteLine(listA[i] + "," + hm.ToString());
+                                            }
+                                        }
+                                        
+                                       
+                                    }
                                     Console.WriteLine(listA[i] + " is malware");
 
+                                }
                             }
                         }
-                    }
 
+                    }
                 }
                 catch (Exception ex)
                 {
