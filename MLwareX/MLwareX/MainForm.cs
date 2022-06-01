@@ -66,7 +66,7 @@ namespace MLwareX
                         }
                         else
                         {
-                            MessageBox.Show("A threat found.. " + listA[i] + " is malware.");
+                            //MessageBox.Show("A threat found.. " + listA[i] + " is malware.");
                             //Console.WriteLine(listA[i] + " is malware");
                             string dbinfo = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
                             var src = DateTime.Now;
@@ -76,6 +76,22 @@ namespace MLwareX
                                 writer.WriteLine(listA[i] + "," + hm.ToString());
                             }
                             Console.WriteLine(listA[i] + " is malware");
+                            using (var readerx = new StreamReader(dbinfo))
+                            {
+                                List<string> lines = new List<string>();
+                                while (!reader.EndOfStream)
+                                {
+                                    var line = reader.ReadLine();
+                                    var values = line.Split(',');
+                                    lines.Add(values[0]);
+
+                                }
+                                foreach (var line in lines.Distinct()) // might want to supply an equality comparer
+                                {
+                                    Console.WriteLine(line);
+                                    // write line to output file
+                                }
+                            }
                         }
                     }
                 }
@@ -154,6 +170,14 @@ namespace MLwareX
             }
             else
                 watcher.EnableRaisingEvents = false;
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            HelpForm frmHelp = new HelpForm();
+            frmHelp.Show();
+            this.Hide();
+            this.Enabled = false;
         }
     }
 }

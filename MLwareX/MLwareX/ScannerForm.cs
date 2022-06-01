@@ -207,28 +207,29 @@ namespace MLwareX
                                         var linex = reader.ReadLine();
                                         var valuesx = linex.Split(',');
 
-                                        listControl.Add(valuesx[0]);
+                                        listControl.Add(valuesx[0]); // selectedInfo.csv'den okunanlar [0]
                                         listBx.Add(valuesx[1]);
                                     }
                                     reader2.Close();
-                                    bool check = true;
+                                    bool check = false;
                                     var src = DateTime.Now;
                                     var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second);
                                     using (StreamWriter writer = new StreamWriter(dbinfo, true))
                                     {
+
                                         for (int ix = 0; ix < listControl.Count; ix++)
                                         {
+
+                                            Console.WriteLine(listControl[ix]);
+                                            Console.WriteLine("-----------------------------%+%^%'+%^+%^+%'^+%'^+&'^+&'^+&'^+&^+%&^+&^+%&");
+                                            Console.WriteLine(listA[ix]);
                                             for (int bx = 0; bx < listA.Count; bx++)
                                             {
-                                                if (listA[bx] == listControl[ix])
+                                                if (listControl[ix] == listA[bx])
                                                 {
                                                     check = true;
                                                     break;
                                                 }
-                                                else
-                                                {
-                                                    check = false;
-                                                }  
                                             }
                                             if (check == false)
                                             {

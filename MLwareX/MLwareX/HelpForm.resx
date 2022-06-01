@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>When you access to the scanner page, you can either scan a file or scan a directory. If you want to scan only a spesific file, you should click “Scan File” button and choose your file. Other than that if you want to scan every Windows PE file in a folder/driver, you should click “Scan Directory” and choose your directory path.
+Back button returns you to the main page.</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Detection history includes all of the malware found in your computer throughout previous scans. If there are any, you are able to delete these files just by clicking trash bin icon right next to every row. You can view name, date and location information of every single malicious file. 
+Back button returns you to the main page.</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Active protection keeps your computer safe even if you are not scanning a spesific file or directory. When it is enabled, MLwareX runs in the background and lets you know if there is a new malicious file.</value>
+  </data>
 </root>

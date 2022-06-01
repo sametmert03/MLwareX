@@ -35,6 +35,7 @@ namespace MLwareX
         {
             List<Label> labels = new List<Label>();
             string dbinfo = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
+            
 
             using (var reader = new StreamReader(dbinfo))
             {
@@ -66,6 +67,38 @@ namespace MLwareX
         private void listBox2_Click(object sender, EventArgs e)
         {
             listBox1.SelectedIndex = listBox2.SelectedIndex;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string yourFilepath = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
+            string selectedText = listBox1.SelectedItem.ToString();
+            string selectedHm = listBox2.SelectedItem.ToString();
+
+            string[] Lines = File.ReadAllLines(yourFilepath);
+            File.Delete(yourFilepath);// Deleting the file
+            using (StreamWriter sw = File.AppendText(yourFilepath))
+
+            {
+                foreach (string line in Lines)
+                {
+                    if (line.IndexOf(selectedText) >= 0)
+                    {
+                        //Skip the line
+                        continue;
+                    }
+                    else
+                    {
+                        sw.WriteLine(line);
+                    }
+                }
+            }
+
+            File.Delete(selectedText);
+
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            DetectionForm_Load(sender, e);
         }
     }
     

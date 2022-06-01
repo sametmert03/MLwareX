@@ -33,13 +33,14 @@ namespace MLwareX
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabQuarentined = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabAllowList = new System.Windows.Forms.TabPage();
             this.tabHistory = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabQuarentined.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +105,26 @@ namespace MLwareX
             this.tabQuarentined.Text = "Quarentined Items";
             this.tabQuarentined.UseVisualStyleBackColor = true;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(780, 61);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(435, 260);
+            this.listBox2.TabIndex = 4;
+            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(8, 61);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(773, 260);
+            this.listBox1.TabIndex = 3;
+            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(58)))), ((int)(((byte)(97)))));
@@ -160,25 +181,23 @@ namespace MLwareX
             this.tabHistory.Text = "History";
             this.tabHistory.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // btnDelete
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(8, 61);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(773, 260);
-            this.listBox1.TabIndex = 3;
-            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(780, 61);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(435, 260);
-            this.listBox2.TabIndex = 4;
-            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(58)))), ((int)(((byte)(97)))));
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(58)))), ((int)(((byte)(97)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(255)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDelete.Location = new System.Drawing.Point(47, 490);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(259, 117);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // DetectionForm
             // 
@@ -186,6 +205,7 @@ namespace MLwareX
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1296, 620);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
@@ -217,5 +237,6 @@ namespace MLwareX
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
