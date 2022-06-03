@@ -106,9 +106,10 @@ namespace MLwareX
                     for (int i = 0; i < listA.Count; i++)
                     {
 
-                        float f1 = float.Parse(listB[i].Replace(".", ","));
+                        decimal f1 = decimal.Parse(listB[i]);
                         Console.WriteLine("listB " + f1);
-                        if (f1 < 0.85)
+                        Console.WriteLine(listB[i]);
+                        if (f1 < Convert.ToDecimal(0.70) )
                         {
                             //MessageBox.Show(listA[i].ToString() + " is harmless","Result",0,MessageBoxIcon.Hand);
                             listBox1.Items.Add(listA[i] + " is harmless");
@@ -117,6 +118,33 @@ namespace MLwareX
                         {
                             //MessageBox.Show(listA[i].ToString() + " is malware","Result",0,MessageBoxIcon.Warning);
                             listBox1.Items.Add(listA[i] + " is malware");
+                            //MessageBox.Show("A threat found.. " + listA[i] + " is malware.");
+                            //Console.WriteLine(listA[i] + " is malware");
+                            string dbinfo = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
+                            var src = DateTime.Now;
+                            var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second);
+                            using (StreamWriter writer = new StreamWriter(dbinfo, true))
+                            {
+                                writer.WriteLine(listA[i] + "," + hm.ToString());
+                            }
+                            Console.WriteLine(listA[i] + " is malware");
+                            using (var readerx = new StreamReader(dbinfo))
+                            {
+                                List<string> lines = new List<string>();
+                                while (!reader.EndOfStream)
+                                {
+                                    var line = reader.ReadLine();
+                                    var values = line.Split(',');
+                                    lines.Add(values[0]);
+
+                                }
+                                foreach (var line in lines.Distinct()) // might want to supply an equality comparer
+                                {
+                                    Console.WriteLine(line);
+                                    // write line to output file
+                                }
+                            }
+
 
                         }
                         listBox1.Visible = true;
@@ -190,57 +218,40 @@ namespace MLwareX
                         for (int i = 0; i < listA.Count; i++)
                         {
 
-                            float f1 = float.Parse(listB[i].Replace(".", ","));
+                            decimal f1 = decimal.Parse(listB[i]);
                             Console.WriteLine("listB " + f1);
-                            if (f1 < 0.85)
+                            Console.WriteLine(listB[i]);
+                            if (f1 < Convert.ToDecimal(0.70))
                             {
                                 Console.WriteLine(listA[i] + " is harmless");
                             }
                             else
                             {
-                                using (var reader2 = new StreamReader(dbinfo))
+                                //MessageBox.Show("A threat found.. " + listA[i] + " is malware.");
+                                //Console.WriteLine(listA[i] + " is malware");
+                               // string dbinfo = @"C:\\Users\\FikriSametMert\Desktop\MLwareX\MLwareX\bin\Debug\selectedInfo.csv";
+                                var src = DateTime.Now;
+                                var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second);
+                                using (StreamWriter writer = new StreamWriter(dbinfo, true))
                                 {
-                                    List<string> listControl = new List<string>();
-                                    List<string> listBx = new List<string>();
+                                    writer.WriteLine(listA[i] + "," + hm.ToString());
+                                }
+                                Console.WriteLine(listA[i] + " is malware");
+                                using (var readerx = new StreamReader(dbinfo))
+                                {
+                                    List<string> lines = new List<string>();
                                     while (!reader.EndOfStream)
                                     {
-                                        var linex = reader.ReadLine();
-                                        var valuesx = linex.Split(',');
+                                        var line = reader.ReadLine();
+                                        var values = line.Split(',');
+                                        lines.Add(values[0]);
 
-                                        listControl.Add(valuesx[0]); // selectedInfo.csv'den okunanlar [0]
-                                        listBx.Add(valuesx[1]);
                                     }
-                                    reader2.Close();
-                                    bool check = false;
-                                    var src = DateTime.Now;
-                                    var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second);
-                                    using (StreamWriter writer = new StreamWriter(dbinfo, true))
+                                    foreach (var line in lines.Distinct()) // might want to supply an equality comparer
                                     {
-
-                                        for (int ix = 0; ix < listControl.Count; ix++)
-                                        {
-
-                                            Console.WriteLine(listControl[ix]);
-                                            Console.WriteLine("-----------------------------%+%^%'+%^+%^+%'^+%'^+&'^+&'^+&'^+&^+%&^+&^+%&");
-                                            Console.WriteLine(listA[ix]);
-                                            for (int bx = 0; bx < listA.Count; bx++)
-                                            {
-                                                if (listControl[ix] == listA[bx])
-                                                {
-                                                    check = true;
-                                                    break;
-                                                }
-                                            }
-                                            if (check == false)
-                                            {
-                                                writer.WriteLine(listA[i] + "," + hm.ToString());
-                                            }
-                                        }
-                                        
-                                       
+                                        Console.WriteLine(line);
+                                        // write line to output file
                                     }
-                                    Console.WriteLine(listA[i] + " is malware");
-
                                 }
                             }
                         }
@@ -257,6 +268,8 @@ namespace MLwareX
             {
                 MessageBox.Show("Nothing selected.");
             }
+
+            MessageBox.Show("Scan Completed. Please check 'Detection History.'","Completed");
         }
     }
 }

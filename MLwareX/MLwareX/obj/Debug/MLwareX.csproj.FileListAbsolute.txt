@@ -74,7 +74,6 @@ C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.Assembl
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.SuggestedBindingRedirects.cache
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.DetectionForm.resources
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.HelpForm.resources
-C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.MainForm.resources
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.NotificationsForm.resources
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.ProfileForm.resources
 C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.Properties.Resources.resources
@@ -129,3 +128,4 @@ C:\MLwareX-master\MLwareX-master\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CoreCo
 C:\MLwareX-master\MLwareX-master\MLwareX\MLwareX\obj\Debug\MLwareX.csproj.CopyComplete
 C:\MLwareX-master\MLwareX-master\MLwareX\MLwareX\obj\Debug\MLwareX.exe
 C:\MLwareX-master\MLwareX-master\MLwareX\MLwareX\obj\Debug\MLwareX.pdb
+C:\Users\FikriSametMert\Desktop\MLwareX\MLwareX\obj\Debug\MLwareX.MainForm.resources

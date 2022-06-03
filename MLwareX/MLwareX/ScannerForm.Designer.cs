@@ -62,8 +62,8 @@ namespace MLwareX
             this.btnScanFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScanFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnScanFile.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnScanFile.Location = new System.Drawing.Point(24, 489);
-            this.btnScanFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScanFile.Location = new System.Drawing.Point(13, 490);
+            this.btnScanFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnScanFile.Name = "btnScanFile";
             this.btnScanFile.Size = new System.Drawing.Size(259, 117);
             this.btnScanFile.TabIndex = 22;
@@ -80,8 +80,8 @@ namespace MLwareX
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnBack.Location = new System.Drawing.Point(1021, 489);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(1012, 490);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(259, 117);
             this.btnBack.TabIndex = 23;
@@ -100,7 +100,7 @@ namespace MLwareX
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
             this.circularProgressBar1.Location = new System.Drawing.Point(61, 97);
-            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
@@ -135,8 +135,8 @@ namespace MLwareX
             this.btnScanDirectory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnScanDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnScanDirectory.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnScanDirectory.Location = new System.Drawing.Point(300, 489);
-            this.btnScanDirectory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScanDirectory.Location = new System.Drawing.Point(280, 490);
+            this.btnScanDirectory.Margin = new System.Windows.Forms.Padding(4);
             this.btnScanDirectory.Name = "btnScanDirectory";
             this.btnScanDirectory.Size = new System.Drawing.Size(259, 117);
             this.btnScanDirectory.TabIndex = 25;
@@ -169,7 +169,7 @@ namespace MLwareX
             this.Controls.Add(this.btnScanFile);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScannerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScannerForm";

@@ -38,8 +38,6 @@ namespace MLwareX
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabAllowList = new System.Windows.Forms.TabPage();
-            this.tabHistory = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabQuarentined.SuspendLayout();
@@ -80,8 +78,6 @@ namespace MLwareX
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabQuarentined);
-            this.tabControl1.Controls.Add(this.tabAllowList);
-            this.tabControl1.Controls.Add(this.tabHistory);
             this.tabControl1.Location = new System.Drawing.Point(47, 95);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -102,7 +98,6 @@ namespace MLwareX
             this.tabQuarentined.Padding = new System.Windows.Forms.Padding(4);
             this.tabQuarentined.Size = new System.Drawing.Size(1225, 341);
             this.tabQuarentined.TabIndex = 0;
-            this.tabQuarentined.Text = "Quarentined Items";
             this.tabQuarentined.UseVisualStyleBackColor = true;
             // 
             // listBox2
@@ -160,27 +155,6 @@ namespace MLwareX
             this.textBox1.Size = new System.Drawing.Size(1207, 47);
             this.textBox1.TabIndex = 0;
             // 
-            // tabAllowList
-            // 
-            this.tabAllowList.Location = new System.Drawing.Point(4, 25);
-            this.tabAllowList.Margin = new System.Windows.Forms.Padding(4);
-            this.tabAllowList.Name = "tabAllowList";
-            this.tabAllowList.Padding = new System.Windows.Forms.Padding(4);
-            this.tabAllowList.Size = new System.Drawing.Size(1225, 341);
-            this.tabAllowList.TabIndex = 1;
-            this.tabAllowList.Text = "Allow List";
-            this.tabAllowList.UseVisualStyleBackColor = true;
-            // 
-            // tabHistory
-            // 
-            this.tabHistory.Location = new System.Drawing.Point(4, 25);
-            this.tabHistory.Margin = new System.Windows.Forms.Padding(4);
-            this.tabHistory.Name = "tabHistory";
-            this.tabHistory.Size = new System.Drawing.Size(1225, 341);
-            this.tabHistory.TabIndex = 2;
-            this.tabHistory.Text = "History";
-            this.tabHistory.UseVisualStyleBackColor = true;
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(58)))), ((int)(((byte)(97)))));
@@ -231,8 +205,6 @@ namespace MLwareX
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabQuarentined;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TabPage tabAllowList;
-        private System.Windows.Forms.TabPage tabHistory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox2;

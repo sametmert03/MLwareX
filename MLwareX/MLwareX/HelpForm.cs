@@ -31,7 +31,6 @@ namespace MLwareX
         private void button1_Click(object sender, EventArgs e)
         {
             MainForm frmMain = new MainForm();
-            frmMain.Show();
             frmMain.Enabled = true;
             this.Close();
         }
@@ -39,9 +38,19 @@ namespace MLwareX
         private void btnBack_Click(object sender, EventArgs e)
         {
             MainForm frmMain = new MainForm();
-            frmMain.Show();
             frmMain.Enabled = true;
             this.Close();
+        }
+
+        private void treeView3_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void HelpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainForm frmMain = new MainForm();
+            frmMain.Show();
         }
     }
 }

@@ -57,10 +57,10 @@ namespace MLwareX
 
                     for (int i = 0; i < listA.Count; i++)
                     {
-
-                        float f1 = float.Parse(listB[i].Replace(".", ","));
+                        decimal f1 = decimal.Parse(listB[i]);
                         Console.WriteLine("listB " + f1);
-                        if (f1 < 0.85)
+                        Console.WriteLine(listB[i]);
+                        if (f1 < Convert.ToDecimal(0.70))
                         {
                             Console.WriteLine(listA[i] + " is harmless brooo");
                         }
@@ -108,6 +108,7 @@ namespace MLwareX
         FileSystemWatcher watcher = new FileSystemWatcher(@"C:\Users\FikriSametMert\Desktop\test");
         private void MainForm_Load(object sender, EventArgs e)
         {
+
             this.Text = "MLwareX         " + DateTime.Now.ToShortDateString();
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime

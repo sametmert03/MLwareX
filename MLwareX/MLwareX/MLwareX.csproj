@@ -118,6 +118,7 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Status.cs" />
     <EmbeddedResource Include="DetectionForm.resx">
       <DependentUpon>DetectionForm.cs</DependentUpon>
     </EmbeddedResource>

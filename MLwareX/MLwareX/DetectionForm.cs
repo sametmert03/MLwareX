@@ -49,11 +49,12 @@ namespace MLwareX
                     listB.Add(values[1]);
 
                 }
-
-                for (int i = 0; i < listA.Count; i++)
+                List<string> a = listA.Distinct().ToList();
+                List<string> b = listB.ToList();
+                for (int i = 0; i < a.Count; i++)
                 {
-                    listBox1.Items.Add(listA[i].ToString());
-                    listBox2.Items.Add(listB[i].ToString());
+                    listBox1.Items.Add(a[i].ToString());
+                    listBox2.Items.Add(b[i].ToString());
                 }
 
             }
